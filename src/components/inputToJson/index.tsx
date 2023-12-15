@@ -36,9 +36,6 @@ export default function InputToJson() {
       style={{ display: "flex",flexDirection:"column", gap: "10px", padding: "5px" , justifyContent:"space-between"}}
     >
       {/* <form> */}
-      <div style={{display:"flex", justifyContent:"center"}}>
-        <h2>Input Data to Array of String</h2>
-      </div>
       <div style={{
           display: "flex",
           flexDirection:"row",
@@ -54,7 +51,7 @@ export default function InputToJson() {
           height: "auto",
         }}
       >
-        <h3>Step 1: Enter Project Properties from app</h3>
+        <h3>Enter Project Properties from app</h3>
         <input
           type="text"
           value={objectPropertyName}
@@ -79,7 +76,7 @@ export default function InputToJson() {
           height: "auto",
         }}
       >
-        <h3>Step 2: Object property list</h3>
+        <h4>Object property list</h4>
         <div className="w-full">
           {parameterNames.map((item: string, key: number) => (
             <div key={key} className="!flex !justify-between gap-4 w-full" style={{display:"flex", justifyContent:"space-between"}}>
@@ -110,7 +107,7 @@ export default function InputToJson() {
           height: "100%",
         }}
       >
-        <h3>Step 3: Enter Value to Object</h3>
+        <h3>Enter Value to Object</h3>
         <div>
           {parameterNames.map((item: string, key: number) => (
             <div key={key} className="!flex !justify-between gap-4 w-full">
@@ -139,7 +136,7 @@ export default function InputToJson() {
           height: "100%",
         }}
       >
-        <h3>Step 4: Final Result</h3>
+        <h3>Final Result</h3>
         <div><button onClick={()=>setJsonList([])}>Clear Array</button></div>
         <pre>{JSON.stringify(jsonList, null, 2)}</pre>
       </div>
